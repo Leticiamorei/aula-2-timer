@@ -1,5 +1,12 @@
-export function Button() {
+
+import { ButtonContainer, ButtonVariant } from './Button.styles';
+
+interface ButtonProps {
+  variant?: ButtonVariant;
+}
+
+export function Button({variant ='primary'} : ButtonProps) {
   return (
-    <h1>ENVIAR</h1>
+    <ButtonContainer variant={variant}>ENVIAR</ButtonContainer>
   )
 }
